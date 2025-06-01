@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: system-ui, -apple-system;
+}
+
+header{
+    background-color: lightblue;
+    text-align: center;
+}
+
+header h1{
+    font-size: 3rem;
+}
+
+header p{
+    font-size: 1.8rem;
+    margin-top: 3vmin;
+}
+
+#add-video-section{
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 8vmin 0vmin;
+    gap: 5vmin;
+}
+
+#url-input{
+    font-size: 1.5rem;
+    padding: 1.5vmin 1.8vmin;
+    border: none;
+    border-radius: 3rem;
+    width: 100vmin;
+}
+
+#add-button{
+    font-size: 1.5rem;
+    padding: 0vmin 3vmin;
+    border: none;
+    border-radius: 3rem;
+}
+
+#video-section{
+    background-color: lightsalmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-grid{
+    width: 180vmin;
+    background-color: lightgoldenrodyellow;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    column-gap: 5vmin;
+    row-gap: 5vmin;
+}
+
+/* #videos {
+     display: flex; flex-wrap: wrap; gap: 1em; margin-top: 2em; 
+}
+
+.video-frame {
+     flex: 1 1 400px; min-width: 400px; 
+} */
+
