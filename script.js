@@ -33,17 +33,34 @@ function extractVideoId(url) {
 const videoUrl = document.getElementById('url-input')
 const addBtn = document.getElementById('add-button')
 const videoGrid = document.getElementById('video-grid')
-
+const invalidUrl = document.getElementById('invalid-url')
+const playAllBtn = document.getElementById('play-all-button')
 
 addBtn.addEventListener('click', () => {
+    // gives the code of the yt video
     const vid = extractVideoId(videoUrl.value)
-    const iframe = document.createElement('iframe')
-    iframe.className = 'video-frame'
-    iframe.width = "400"
-    iframe.height = "225"
-    iframe.src = `https://www.youtube.com/embed/${vid}?autoplay=0&mute=0`
-    iframe.frameBorder = 0
-    iframe.allowFullscreen = true
-    videoGrid.append(iframe)
 
+    if (vid){
+        const iframe = document.createElement('iframe')
+        iframe.className = 'video-frame'
+        iframe.width = "400"
+        iframe.height = "225"
+        iframe.src = `https://www.youtube.com/embed/${vid}?autoplay=0&mute=0`
+        iframe.frameBorder = 0
+        iframe.allowFullscreen = true
+        videoGrid.append(iframe)
+    }
+    
+    else{
+        invalidUrl.textContent = 'Invalid URL'
+    }
+
+})
+
+playAllBtn.addEventListener('click', () => {
+    const vid = extractVideoId(videoUrl.value)
+    const videos = document.querySelectorAll('iframe')
+    videos.forEach((item) => {
+        item.src = `https://www.youtube.com/embed/${vid}?autoplay=1&mute=0&loop=1&playlist=${vid}`
+    })
 })
