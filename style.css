@@ -24,10 +24,22 @@ header p{
 #add-video-section{
     background-color: lightpink;
     display: flex;
-    justify-content: center;
-    /* align-items: center; */
+    flex-direction: column;
+    align-items: center;
     padding: 8vmin 0vmin;
+}
+
+#input-and-button{
+    display: flex;
     gap: 5vmin;
+}
+
+#invalid-url{
+    color: red;
+    font-size: 1.3rem;
+    align-self: flex-start;
+    margin-left: 41vmin;
+    height: 26px;
 }
 
 #url-input{
@@ -45,6 +57,14 @@ header p{
     border-radius: 3rem;
 }
 
+
+#play-all-button{
+    font-size: 2rem;
+    padding: 0.5vmin 1.7vmin;
+    border: none;
+}
+
+
 #video-section{
     background-color: lightsalmon;
     display: flex;
@@ -60,6 +80,8 @@ header p{
     column-gap: 5vmin;
     row-gap: 5vmin;
 }
+
+
 
 /* #videos {
      display: flex; flex-wrap: wrap; gap: 1em; margin-top: 2em; 
